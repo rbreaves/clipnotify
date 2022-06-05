@@ -20,7 +20,6 @@ int main(void) {
 
     clip = XInternAtom(disp, "CLIPBOARD", False);
 
-    XFixesSelectSelectionInput(disp, root, XA_PRIMARY, XFixesSetSelectionOwnerNotifyMask);
     XFixesSelectSelectionInput(disp, root, clip, XFixesSetSelectionOwnerNotifyMask);
 
     XNextEvent(disp, &evt);
